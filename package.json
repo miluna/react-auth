@@ -1,0 +1,43 @@
+{
+  "name": "@miluna/react-auth",
+  "version": "1.0.0",
+  "description": "Auth components for any React project",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miluna/react-auth.git"
+  },
+  "author": "Miguel Angel Luna Armada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miluna/react-auth/issues"
+  },
+  "homepage": "https://github.com/miluna/react-auth#readme",
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-router": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "typescript": "^3.8.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
