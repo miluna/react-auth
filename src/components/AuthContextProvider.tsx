@@ -1,6 +1,5 @@
 import React, { ReactElement, useEffect, useState } from "react";
-import AuthContextState from "./AuthContextState";
-import AuthContext, { initialState } from "./AuthContext";
+import AuthContext from "./AuthContext";
 import AuthSubject from "./AuthSubject";
 
 interface AuthContextProviderProps {
