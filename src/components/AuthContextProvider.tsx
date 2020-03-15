@@ -9,24 +9,28 @@ interface AuthContextProviderProps {
 }
 
 const AuthContextProvider = ({ getStoredAuthValue, children }: AuthContextProviderProps) => {
-  const [state, setState] = useState<AuthContextState>(initialState);
+  const [isAuth, setAuth] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     const subscription = AuthSubject.subscribe(value => {
-      setState({ ...state, isAuth: value });
+      setAuth(value);
     });
     if (getStoredAuthValue) {
       const result = getStoredAuthValue();
-      Promise.resolve(result).then(value => setState({ isAuth: value, checked: true }));
+      Promise.resolve(result).then(value => {
+        setAuth(value);
+        setChecked(true);
+      });
     } else {
-      setState({ ...state, checked: true });
+      setChecked(true);
     }
     return () => {
       subscription.unsubscribe();
     };
   }, []);
 
-  return <AuthContext.Provider value={state}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{ isAuth, checked }}>{children}</AuthContext.Provider>;
 };
 
 export default AuthContextProvider;

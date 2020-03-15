@@ -4,7 +4,7 @@
   "description": "Auth components for any React project",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server -d --config webpack-dev.config.js --open",
     "build": "webpack --config webpack.config.js && tsc"
   },
   "repository": {
