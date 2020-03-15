@@ -2,13 +2,15 @@
   "name": "@miluna/react-auth",
   "version": "1.0.0",
   "description": "Auth components for any React project",
-  "main": "build/index.js",
-  "module": "./src/index.ts",
-  "types": "./src/index.d.ts",
+  "main": "build/index",
+  "module": "src/index",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/*"
+  ],
   "scripts": {
     "start": "webpack-dev-server -d --config webpack-dev.config.js --open",
-    "build": "rollup -c",
-    "build-types": "tsc --declaration --outDir src/index.d.ts --emitDeclarationOnly"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,10 @@
     "url": "https://github.com/miluna/react-auth/issues"
   },
   "homepage": "https://github.com/miluna/react-auth#readme",
-  "dependencies": {
-    "rxjs": "^6.5.4"
-  },
   "peerDependencies": {
     "react": "^16.13.0",
-    "react-router": "^5.1.2"
+    "react-router": "^5.1.2",
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

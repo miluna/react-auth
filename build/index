@@ -105,4 +105,4 @@ exports.AuthSubject = AuthSubject;
 exports.ProtectedComponent = ProtectedComponent;
 exports.ProtectedRoute = ProtectedRoute;
 exports.useAuth = useAuth;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.map
